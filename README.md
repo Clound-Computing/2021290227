@@ -23,3 +23,35 @@ conda install --yes --file requirements.txt
 
 ## Data
 数据集可以从[GossipCop数据集](https://github.com/junyachen/Data-examples#integration-based-legitimate)中获取，本模型同时我们使用了图片信息以及文本信息，将下载后的json文件重新命名，以满足后面数据预处理的读取。命名规则为`gossipcop_v3-X.json`，X为1~6。
+
+## Process dataset
+运行下面的代码处理原始数据，得到满足MCAN输入格式的文件：
+```
+python data_process.py
+```
+上述代码运行完成之后，会在当前目录下的processd_data中生成每个数据集的train.txt和test.txt文件。
+
+## Download pre_trained models
+运行代码需要预训练好的 bert-base-chinese, bert-base-multilingual-cased 以及 pytorch的[vgg19](https://download.pytorch.org/models/vgg19-dcbb9e9d.pth) 模型。
+
+下载之后将模型放入当前目录下的models文件夹中。
+
+## Structure of MCAN_reproduction
+主要的训练代码可以在`MCAN_reproduction.py`中查看
+The main logic of the code is as follows:
+
+```mermaid
+graph TD
+    A(class TrainALL)-->B(class MyDataset)
+    B(class MyDataset)--image, dct_image,text-->C(class MCAN)
+    A(class TrainALL)--hyperparameter-->C(class MCAN)
+    C(class MCAN)--image--> D(class vgg)
+    C(class MCAN)--dct_image--> E(class DctCNN)
+    C(class MCAN)--text--> F(class Bert)
+    D(class vgg)--spatial_feature-->G(class multimodal_fusion_layer)
+    E(class DctCNN)--frequency_feature-->G(class multimodal_fusion_layer)
+    F(class bert)--textual_featre-->G(class multimodal_fusion_layer)
+    G(class multimodal_fusion_layer)--fused_feature-->H(classifier)
+```
+
+## Run
