@@ -38,6 +38,7 @@ python data_process.py
 
 ## Structure of MCAN_reproduction
 主要的训练代码可以在`MCAN_reproduction.py`中查看
+
 The main logic of the code is as follows:
 
 ```mermaid
