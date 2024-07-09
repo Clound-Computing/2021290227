@@ -12,3 +12,14 @@
 
 ## Architecture
 首先，我们提取图像的语义级和物理级特征以及文本特征。然后我们使用深度共同注意网络将它们融合在一起，该网络由多个共同注意层组成。最后利用多模态融合表示来判断输入新闻的真实性
+
+## Create the env
+首先创建代码所需的环境，推荐使用anaconda创建虚拟环境。代码运行所需要的关键包已在requirements.txt中列出。
+
+The python version is python-3.8.16. The detailed version of some packages is available in requirements.txt. You can install all the required packages using the following command:
+```
+conda install --yes --file requirements.txt
+```
+
+## Data
+数据集可以从[GossipCop数据集](https://github.com/junyachen/Data-examples#integration-based-legitimate)中获取，本模型同时我们使用了图片信息以及文本信息，将下载后的json文件重新命名，以满足后面数据预处理的读取。命名规则为gossipcop_v3-X.json，X为1~6。
