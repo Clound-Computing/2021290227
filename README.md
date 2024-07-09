@@ -3,4 +3,4 @@
 
 [Multimodal Fusion with Co-Attention Networks for Fake news Detection](https://aclanthology.org/2021.findings-acl.226.pdf)
 
-官方代码地址： https://github.com/plw-study/Reproduction_of_MCAN
+官方代码地址： GitHub - wuyang45/MCAN_code: Multimodal Fusion with Co-Attention Networks for Fake News Detection
