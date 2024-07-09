@@ -65,35 +65,6 @@ python MCAN_reproduction.py
 If you are insterested in this work, and want to use the dataset or codes in this repository, please star this repository and cite by:
 
 ```
-@article{PENG2024103564,
-title = {Not all fake news is semantically similar: Contextual semantic representation learning for multimodal fake news detection},
-journal = {Information Processing & Management},
-volume = {61},
-number = {1},
-pages = {103564},
-year = {2024},
-issn = {0306-4573},
-doi = {https://doi.org/10.1016/j.ipm.2023.103564},
-url = {https://www.sciencedirect.com/science/article/pii/S0306457323003011},
-author = {Liwen Peng and Songlei Jian and Zhigang Kan and Linbo Qiao and Dongsheng Li},
-keywords = {Fake news detection, Multimodal learning, Social network, Representation learning, Deep learning}
-}
-```
-
-```
-@INPROCEEDINGS{peng-MRML,
-  author={Peng, Liwen and Jian, Songlei and Li, Dongsheng and Shen, Siqi},
-  booktitle={ICASSP 2023 - 2023 IEEE International Conference on Acoustics, Speech and Signal Processing (ICASSP)}, 
-  title={MRML: Multimodal Rumor Detection by Deep Metric Learning}, 
-  year={2023},
-  volume={},
-  number={},
-  pages={1-5},
-  doi={10.1109/ICASSP49357.2023.10096188}
-}
-```
-
-```
 @inproceedings{wu2021multimodal,
         title={Multimodal fusion with co-attention networks for fake news detection},
         author={Wu, Yang and Zhan, Pengwei and Zhang, Yunjian and Wang, Liming and Xu, Zhen},
