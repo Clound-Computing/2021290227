@@ -22,4 +22,4 @@ conda install --yes --file requirements.txt
 ```
 
 ## Data
-数据集可以从[GossipCop数据集](https://github.com/junyachen/Data-examples#integration-based-legitimate)中获取，本模型同时我们使用了图片信息以及文本信息，将下载后的json文件重新命名，以满足后面数据预处理的读取。命名规则为gossipcop_v3-X.json，X为1~6。
+数据集可以从[GossipCop数据集](https://github.com/junyachen/Data-examples#integration-based-legitimate)中获取，本模型同时我们使用了图片信息以及文本信息，将下载后的json文件重新命名，以满足后面数据预处理的读取。命名规则为`gossipcop_v3-X.json`，X为1~6。
